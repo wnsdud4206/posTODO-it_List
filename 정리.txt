@@ -1,0 +1,37 @@
+posTODO-it List
+
+- 이름을 바꿔야 할듯, Todo List 기능만 구현할 것이 아니라 기본적으로 메모기능에 Todo 기능을 사용자가 설정할 수 있게끔 해야될 것 같음, 그렇기 때문에 이름을 Remind? 라고 해야할듯
+
+- Redux보다는 context api 혹은 useReducer로 하는게 좋을듯, 아닌가 Redux를 써야하나?
+- 메모를 이동할 땐 drag&drop 사용? 위치는 부보 position relative에 자식(이동대상) position absolute로 left, top 위치 정의&저장(dragover 사용?)(참고: https://inpa.tistory.com/entry/%EB%93%9C%EB%9E%98%EA%B7%B8-%EC%95%A4-%EB%93%9C%EB%A1%AD-Drag-Drop-%EA%B8%B0%EB%8A%A5)
+- 메모를 일정시간동안 겹치면 그룹 혹은 폴더를 생성해 넣는 기능(태그로 구분해도 되려나?)
+- localStorage 활용해서 사용자의 메모 저장
+- 각각의 메모 위치도 localStorage에 저장
+
+- 메모장으로 저장 가능하게끔?, 전체선택 같은걸로
+- post 최대 갯수 지정
+
+- auth?, 일단은 localStorage로 사용해보고 firebase 도입할지 생각해보기
+
+- post 내용 복사버튼 따로 만들기? 혹은 내보내기 기능? (드래그를 막을 것이기 때문에)
+
+
+localStorage 사용
+- 맨 처음 localStorage 에 저장된 값이 없을 경우에 조건문으로 구분해 기본값을 넣어준다.
+- 업데이트할 때는 state로 저장해서 추가하고 localStorage에 저장하는 방식으로 진행할 예정
+
+
+구조
+App.js - Container.js - Header.js
+                      - Contents.js
+       - SideBar.js
+       - Footer.js?
+
+
+react font-awesome - https://fontawesome.com/docs/web/use-with/react/
+> npm i --save @fortawesome/fontawesome-svg-core
+and           // uninstall
+> npm i --save @fortawesome/react-fontawesome
+# Free icons styles
+> npm i --save @fortawesome/free-solid-svg-icons
+> npm i --save @fortawesome/free-regular-svg-icons
